@@ -29,11 +29,10 @@ public class Radio {
     }
 
     public void reduceVolume() {
-        if (currentVolume <= 100) {
+        if (currentVolume > 0) {
             currentVolume = currentVolume - 1;
-        }
-        if (currentVolume < 0) {
-            currentVolume = 0;
+        } else {
+            return;
         }
 
 

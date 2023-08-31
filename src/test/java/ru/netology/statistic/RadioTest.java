@@ -158,6 +158,15 @@ public class RadioTest {
         Assertions.assertEquals(expected, actual);
     }
     @Test
+    public void redusehundredVolume() {
+        Radio radio = new Radio();
+        radio.setCurrentVolume(100);
+        radio.reduceVolume();
+        int actual = radio.getCurrentVolume();
+        int expected = 99;
+        Assertions.assertEquals(expected, actual);
+    }
+    @Test
     public void reduseMaxInOneVolume() {
         Radio radio = new Radio();
         radio.setCurrentVolume(100);
