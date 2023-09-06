@@ -8,7 +8,7 @@ public class RadioTest {
     @Test
     public void numberStation() {
 
-        Radio radio = new Radio();
+        Radio radio = new Radio(10);
         radio.setCurrentStation(5);
         int actual = radio.getCurrentStation();
         int expected = 5;
@@ -18,7 +18,7 @@ public class RadioTest {
     @Test
     public void negativeNumberStation() {
 
-        Radio radio = new Radio();
+        Radio radio = new Radio(10);
         radio.setCurrentStation(-1);
         int actual = radio.getCurrentStation();
         int expected = 0;
@@ -28,7 +28,7 @@ public class RadioTest {
     @Test
     public void zeroNumberStation() {
 
-        Radio radio = new Radio();
+        Radio radio = new Radio(10);
         radio.setCurrentStation(4);
         radio.setCurrentStation(0);
         int actual = radio.getCurrentStation();
@@ -39,7 +39,7 @@ public class RadioTest {
     @Test
     public void oneNumberStation() {
 
-        Radio radio = new Radio();
+        Radio radio = new Radio(10);
         radio.setCurrentStation(1);
         int actual = radio.getCurrentStation();
         int expected = 1;
@@ -49,7 +49,7 @@ public class RadioTest {
     @Test
     public void eightNumberStation() {
 
-        Radio radio = new Radio();
+        Radio radio = new Radio(10);
         radio.setCurrentStation(8);
         int actual = radio.getCurrentStation();
         int expected = 8;
@@ -59,7 +59,7 @@ public class RadioTest {
     @Test
     public void nineNumberStation() {
 
-        Radio radio = new Radio();
+        Radio radio = new Radio(10);
         radio.setCurrentStation(9);
         int actual = radio.getCurrentStation();
         int expected = 9;
@@ -69,7 +69,7 @@ public class RadioTest {
     @Test
     public void tenNumberStation() {
 
-        Radio radio = new Radio();
+        Radio radio = new Radio(10);
         radio.setCurrentStation(10);
         int actual = radio.getCurrentStation();
         int expected = 0;
@@ -79,7 +79,7 @@ public class RadioTest {
     @Test
     public void nextStation() {
 
-        Radio radio = new Radio();
+        Radio radio = new Radio(10);
         radio.setCurrentStation(7);
         radio.next();
         int actual = radio.getCurrentStation();
@@ -90,7 +90,7 @@ public class RadioTest {
     @Test
     public void nextAfterNineStation() {
 
-        Radio radio = new Radio();
+        Radio radio = new Radio(10);
         radio.setCurrentStation(9);
         radio.next();
         int actual = radio.getCurrentStation();
@@ -101,7 +101,7 @@ public class RadioTest {
     @Test
     public void prevAfterZeroStation() {
 
-        Radio radio = new Radio();
+        Radio radio = new Radio(10);
         radio.setCurrentStation(0);
         radio.prev();
         int actual = radio.getCurrentStation();
@@ -112,7 +112,7 @@ public class RadioTest {
     @Test
     public void prevStation() {
 
-        Radio radio = new Radio();
+        Radio radio = new Radio(10);
         radio.setCurrentStation(7);
         radio.prev();
         int actual = radio.getCurrentStation();
@@ -122,7 +122,7 @@ public class RadioTest {
     }
     @Test
     public void increaseVolume() {
-        Radio radio = new Radio();
+        Radio radio = new Radio (100);
         radio.setCurrentVolume(30);
         radio.increaseVolume();
         int actual = radio.getCurrentVolume();
